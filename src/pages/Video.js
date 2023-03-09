@@ -11,7 +11,6 @@ import Loading from "../components/ui/Loading";
 export default function Video() {
     const dispatch = useDispatch()
     const { video, isLoading, isError, error } = useSelector(state => state.video)
-    console.log(video)
     const { videoId } = useParams()
     useEffect(() => {
         dispatch(fetchVideo(videoId))
